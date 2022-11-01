@@ -2,7 +2,7 @@
   uses: jjst/action-digitalocean-deploy-app@v2
 
 
-name: Test and Deploy
+
 
 on: push
 jobs:
