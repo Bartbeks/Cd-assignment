@@ -1,3 +1,7 @@
+- name: Digital Ocean Deploy App
+  uses: jjst/action-digitalocean-deploy-app@v2
+
+
 name: Test and Deploy
 
 on: push
@@ -7,12 +11,10 @@ jobs:
     #needs: run-test
     runs-on: ubuntu-20.04
     steps:
-      - name: SSH Remote Commands
-        uses: appleboy/ssh-action@v0.1.4
+      - name: Digital Ocean Deploy App
+        uses: jjst/action-digitalocean-deploy-app@v2
         with:
-          host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_KEY }}
-          username: ${{ secrets.SSH_USERNAME }}
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
          
           script: |
             cd /home/winc-cd
