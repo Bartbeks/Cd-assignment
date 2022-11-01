@@ -1,28 +1,23 @@
 - name: Digital Ocean Deploy App
   uses: jjst/action-digitalocean-deploy-app@v2
+  on: push
+    jobs:
+    deploy:
+        #needs: run-test
+        runs-on: ubuntu-20.04
+        steps:
+          - name: Digital Ocean Deploy App
+            uses: jjst/action-digitalocean-deploy-app@v2
+            with:
+              host: ${{secret.HOST}}
+              token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-
-
-
-on: push
-jobs:
-
-  deploy:
-    #needs: run-test
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Digital Ocean Deploy App
-        uses: jjst/action-digitalocean-deploy-app@v2
-        with:
-          host: ${{secret.HOST}}
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-         
-          script: |
-            cd /home/winc-cd
-            echo 'Entering /home/winc-cd directory'
-            git pull
-            echo 'Repository has been pulled'
-            systemctl restart winc-cd
-            echo 'winc-cd restarted'
+              script: |
+                cd /home/winc-cd
+                echo 'Entering /home/winc-cd directory'
+                git pull
+                echo 'Repository has been pulled'
+                systemctl restart winc-cd
+                echo 'winc-cd restarted'
 
  
