@@ -29,4 +29,4 @@ jobs:
           # PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
 
-          script: echo 'connection succes5'
+          script: echo 'connection succes6'
