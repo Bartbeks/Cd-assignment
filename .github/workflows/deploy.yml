@@ -20,13 +20,4 @@ jobs:
           source: "."
           target: "/var/www/t-tauri"
 
-      - name: Executing remote command
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          KEY: ${{ secrets.SSHKEY }}
-          # PASSWORD: ${{ secrets.PASSWORD }}
-          PORT: ${{ secrets.PORT }}
-
           script: echo 'connection succes6'
