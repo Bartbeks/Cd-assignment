@@ -20,4 +20,4 @@ jobs:
           source: "."
           target: "/var/www/t-tauri"
 
-          script: echo 'connection succes6'
+          script: echo 'connection succes7'
