@@ -20,4 +20,4 @@ jobs:
           # source: "."
           # target: "/var/www/t-tauri"
 
-        script: whoami
+          script: whoami
