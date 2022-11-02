@@ -28,4 +28,4 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
           # KEY: ${{ secrets.SSHKEY }}
-          script: echo 'connection succes3'
+          script: echo 'connection succes4'
