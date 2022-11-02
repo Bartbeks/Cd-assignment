@@ -20,6 +20,4 @@ jobs:
           # source: "."
           # target: "/var/www/t-tauri"
 
-          script: |
-
-            echo 'geslaagd'
+        script: whoami
