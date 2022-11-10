@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: test ssh connection
+      - name: test2 ssh connection
         uses: appleboy/ssh-action@master
         with:
           HOST: ${{ secrets.HOST }}
