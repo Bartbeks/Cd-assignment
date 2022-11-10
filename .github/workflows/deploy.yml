@@ -15,7 +15,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
+          USERNAME: root
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
           # source: "."
