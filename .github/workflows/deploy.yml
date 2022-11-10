@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    btanches: [master]
+    branches: [master]
 
 jobs:
   build:
