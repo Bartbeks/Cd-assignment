@@ -15,8 +15,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
           KEY: ${{ secrets.SSHKEY }}
           # source: "."
           # target: "/var/www/t-tauri/"
