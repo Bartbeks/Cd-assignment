@@ -18,11 +18,11 @@ jobs:
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
           KEY: ${{ secrets.SSHKEY }}
-          source: "."
-          target: "/var/www/t-tauri/"
+          # source: "."
+          # target: "/var/www/t-tauri/"
           script: |
-            cd /var/www/t-tauri
-            echo 'Entering /home/winc-cd directory'
+            cd /home/test
+            echo 'Entering test'
             git pull
             echo 'Repository has been pulled'
             systemctl restart winc-cd
