@@ -11,15 +11,34 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      # - name: test2 ssh connection
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     HOST: ${{ secrets.HOST }}
+      #     PORT: ${{ secrets.PORT }}
+      #     USERNAME: ${{ secrets.USERNAME }}
+      #     KEY: ${{ secrets.SSHKEY }}
+      # source: "."
+      # target: "/var/www/t-tauri/"
       - name: test2 ssh connection
-        uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@master
         with:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
           KEY: ${{ secrets.SSHKEY }}
-          # source: "."
-          # target: "/var/www/t-tauri/"
+          source: "."
+          target: "/home/test2/"
+          #  - name: copy contents to VPS via ssh key
+          #   uses: appleboy/scp-action@master
+          #   env:
+          #     HOST: ${{ secrets.HOST }}
+          #     USERNAME: ${{ secrets.USERNAME }}
+          #     KEY: ${{ secrets.SSHKEY }}
+          #     PORT: ${{ secrets.PORT }}
+          #   with:
+          #     source: "."
+          #     target: "/home/"
           script: |
             cd /home
             echo 'Entering test5'
