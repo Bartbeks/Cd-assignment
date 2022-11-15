@@ -21,13 +21,15 @@ jobs:
           # source: "."
           # target: "/var/www/t-tauri/"
           script: |
-            cd /home/test
+            cd /home
             echo 'Entering test5'
-            git init
-            echo 'init'
-            git pull
-            echo 'Repository has been pulled'
-            systemctl restart test
-            echo 'test restarted'
+            mkdir test2
+            echo 'test 2'
+            cd test2
+            touch test2.txt
+            # git pull
+            # echo 'Repository has been pulled'
+            # systemctl restart test
+            # echo 'test restarted'
           # script: |
           #   whoami
