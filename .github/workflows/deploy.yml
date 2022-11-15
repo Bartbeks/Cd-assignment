@@ -46,7 +46,7 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           KEY: ${{ secrets.SSHKEY }}
           PORT: ${{ secrets.PORT }}
-          script: sh /home/command.sh
+          script: sh /home/test2/command.sh
           # script: |
           #   cd /home
           #   echo 'Entering test5'
