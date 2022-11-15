@@ -23,9 +23,9 @@ jobs:
           script: |
             cd /home/test
             echo 'Entering test5'
-            git pull
-            echo 'Repository has been pulled'
-            systemctl restart test
-            echo 'test restarted'
+            touch test.txt
+            # echo 'Repository has been pulled'
+            # systemctl restart test
+            # echo 'test restarted'
           # script: |
           #   whoami
