@@ -39,16 +39,24 @@ jobs:
           #   with:
           #     source: "."
           #     target: "/home/"
-          script: |
-            cd /home
-            echo 'Entering test5'
-            mkdir test2
-            echo 'test 2'
-            cd test2
-            touch test2.txt
-            # git pull
-            # echo 'Repository has been pulled'
-            # systemctl restart test
-            # echo 'test restarted'
+      - name: executing remote ssh commands
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          KEY: ${{ secrets.SSHKEY }}
+          PORT: ${{ secrets.PORT }}
+          script: sh /home/command.sh
+          # script: |
+          #   cd /home
+          #   echo 'Entering test5'
+          #   mkdir test2
+          #   echo 'test 2'
+          #   cd test2
+          #   touch test2.txt
+          #   # git pull
+          #   # echo 'Repository has been pulled'
+          #   # systemctl restart test
+          #   # echo 'test restarted'
           # script: |
           #   whoami
