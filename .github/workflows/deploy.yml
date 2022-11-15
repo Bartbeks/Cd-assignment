@@ -18,14 +18,16 @@ jobs:
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
           KEY: ${{ secrets.SSHKEY }}
-          source: "."
-          target: "/home/test"
+          # source: "."
+          # target: "/var/www/t-tauri/"
           script: |
-            # cd /home/test
-            # echo 'Entering test5'
-            # touch test.txt
-            # echo 'Repository has been pulled'
-            # systemctl restart test
-            # echo 'test restarted'
+            cd /home/test
+            echo 'Entering test5'
+            git init
+            echo 'init'
+            git pull
+            echo 'Repository has been pulled'
+            systemctl restart test
+            echo 'test restarted'
           # script: |
-          # whoami
+          #   whoami
