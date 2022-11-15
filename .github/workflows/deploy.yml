@@ -28,4 +28,4 @@ jobs:
             # systemctl restart test
             # echo 'test restarted'
           # script: |
-             whoami
+          # whoami
