@@ -22,7 +22,7 @@ jobs:
           # target: "/var/www/t-tauri/"
           script: |
             cd /home/test
-            echo 'Entering test'
+            echo 'Entering test5'
             git pull
             echo 'Repository has been pulled'
             systemctl restart test
